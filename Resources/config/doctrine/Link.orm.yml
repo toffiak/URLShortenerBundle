@@ -1,0 +1,5 @@
+Toffiak\URLShortenerBundle\Entity\Link:
+    type: mappedSuperclass    
+    fields:
+        original_url: { type: string, lenght: 2000, nullable: false }
+        name: { type: string, length: 32, nullable: false }

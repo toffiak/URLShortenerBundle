@@ -1,0 +1,4 @@
+ToffiakURLShortenerBundle_link:
+    resource: "@ToffiakURLShortenerBundle/Resources/config/routing/link.yml"
+    prefix:   /
+

@@ -1,0 +1,20 @@
+Toffiak\URLShortenerBundle\Entity\Link:
+    properties:
+        original_url:
+          - NotBlank: 
+              message: toffiak_urlshortener.validation.original_url_empty
+          - Url: 
+              message: toffiak_urlshortener.validation.original_url_invalid
+          - Length:
+              min: 2
+              max: 2000           
+              minMessage: toffiak_urlshortener.validation.original_url_to_short
+              maxMessage: toffiak_urlshortener.validation.original_url_to_long
+        name:
+          - NotBlank:
+              message: toffiak_urlshortener.validation.name_empty
+          - Length:
+              min: 2
+              max: 255    
+              minMessage: toffiak_urlshortener.validation.name_to_short
+              maxMessage: toffiak_urlshortener.validation.name_to_long  

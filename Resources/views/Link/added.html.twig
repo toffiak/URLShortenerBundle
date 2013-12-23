@@ -1,0 +1,5 @@
+{% extends 'ToffiakURLShortenerBundle::layout.html.twig' %}
+
+{% block body -%}
+    {% trans from 'ToffiakURLShortenerBundle' %}toffiak_urlshortener.message.added{% endtrans %} <a href="http://{{ app.request.host ~ '/' ~name }}">http://{{ app.request.host ~ '/' ~name }}</a>
+{% endblock %}

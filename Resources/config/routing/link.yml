@@ -1,0 +1,16 @@
+link_new:
+    pattern:  /link/new
+    defaults: { _controller: "ToffiakURLShortenerBundle:Link:new" }
+
+link_create:
+    pattern:  /link/create
+    defaults: { _controller: "ToffiakURLShortenerBundle:Link:create" }
+    requirements: { _method: post }
+
+link_added:
+    pattern:  /link/added/{name}
+    defaults: { _controller: "ToffiakURLShortenerBundle:Link:added" }
+    
+link_show:
+    pattern:  /{name}
+    defaults: { _controller: "ToffiakURLShortenerBundle:Link:show" }

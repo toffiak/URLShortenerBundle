@@ -1,0 +1,66 @@
+<?php
+
+namespace Toffiak\URLShortenerBundle\Entity;
+
+use Toffiak\URLShortenerBundle\Model\Link as BaseLink;
+
+abstract class Link extends BaseLink
+{
+    
+    /**
+     * @var string
+     */
+    private $original_url;
+
+    /**
+     * @var string
+     */
+    private $name;
+
+
+    /**
+     * Set original_url
+     *
+     * @param string $originalUrl
+     * @return Link
+     */
+    public function setOriginalUrl($originalUrl)
+    {
+        $this->original_url = $originalUrl;
+    
+        return $this;
+    }
+
+    /**
+     * Get original_url
+     *
+     * @return string 
+     */
+    public function getOriginalUrl()
+    {
+        return $this->original_url;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Link
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+}

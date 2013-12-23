@@ -1,0 +1,24 @@
+parameters:
+    toffiak_urlshortener.link.form_name: formularzek #toffiak_urlshortener_link_form
+    toffiak_urlshortener.link.form_type: Toffiak\URLShortener\Form\Type\LinkType
+    toffiak_urlshortener.link.success_url: "link_added"
+
+services:
+    
+    toffiak_urlshortener.link.manager:
+        class: %toffiak_urlshortener.link.manager_class%
+        arguments: ["@doctrine.orm.entity_manager", "%toffiak_urlshortener.link.class%"]
+        
+    toffiak_urlshortener.link.form:
+        class: %toffiak_urlshortener.link.form_type%
+        arguments: ["%toffiak_urlshortener.link.class%"]
+        tags:
+         -  { name: form.type }
+
+    toffiak_urlshortener.form_factory:
+        class: Toffiak\URLShortenerBundle\Form\Factory\FormFactory
+        arguments: ["@form.factory", "%toffiak_urlshortener.link.form_name%", "@toffiak_urlshortener.link.form"]
+        
+    toffiak_urlshortener.link.generator:
+        class: Toffiak\URLShortenerBundle\Util\NameGenerator
+        arguments: ["@doctrine.orm.entity_manager"]

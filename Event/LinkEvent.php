@@ -11,11 +11,21 @@ class LinkEvent extends Event
     private $response;
     private $link;
 
+    /**
+     * Constructing link event.
+     * 
+     * @param type $link
+     */
     public function __construct($link)
     {
         $this->link = $link;
     }
 
+    /**
+     * Setting response.
+     * 
+     * @param \Symfony\Component\HttpFoundation\Response $response
+     */
     public function setResponse(Response $response)
     {
         $this->response = $response;
@@ -29,6 +39,11 @@ class LinkEvent extends Event
         return $this->response;
     }
 
+    /**
+     * Getting link entity.
+     * 
+     * @return type
+     */
     public function getLink()
     {
         return $this->link;

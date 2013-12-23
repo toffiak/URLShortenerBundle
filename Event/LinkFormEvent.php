@@ -12,6 +12,11 @@ class LinkFormEvent extends Event
     private $form;
     private $response;
 
+    /**
+     * LinkFormType constructor.
+     * 
+     * @param \Symfony\Component\Form\FormInterface $form
+     */
     public function __construct(FormInterface $form)
     {
         $this->form = $form;
@@ -25,6 +30,11 @@ class LinkFormEvent extends Event
         return $this->form;
     }
 
+    /**
+     * Setting response.
+     * 
+     * @param \Symfony\Component\HttpFoundation\Response $response
+     */
     public function setResponse(Response $response)
     {
         $this->response = $response;

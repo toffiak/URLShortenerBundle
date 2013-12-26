@@ -1,5 +1,5 @@
 parameters:
-    toffiak_urlshortener.link.form_name: formularzek #toffiak_urlshortener_link_form
+    toffiak_urlshortener.link.form_name: toffiak_urlshortener_link_form
     toffiak_urlshortener.link.form_type: Toffiak\URLShortenerBundle\Form\Type\LinkType
     toffiak_urlshortener.link.success_url: "link_added"
 

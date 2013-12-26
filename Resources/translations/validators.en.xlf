@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>toffiak_urlshortener.validation.original_url_empty</source>
+                <target>URL should not be empty</target>
+            </trans-unit>  
+            <trans-unit id="2">
+                <source>toffiak_urlshortener.validation.original_url_to_short</source>
+                <target>[-Inf,Inf]URL is too short, minimum number of chars {{ limit }}</target>
+            </trans-unit>              
+            <trans-unit id="3">
+                <source>toffiak_urlshortener.validation.original_url_to_long</source>
+                <target>[-Inf,Inf]URL is too long, maximum number of chars {{ limit }} chars</target>
+            </trans-unit>   
+            <trans-unit id="4">
+                <source>toffiak_urlshortener.validation.name_empty</source>
+                <target>Name shouls not be empty</target>
+            </trans-unit>  
+            <trans-unit id="5">
+                <source>toffiak_urlshortener.validation.name_to_short</source>
+                <target>[-Inf,Inf]Name is too short, minimum number of chars {{ limit }}</target>
+            </trans-unit>              
+            <trans-unit id="6">
+                <source>toffiak_urlshortener.validation.name_to_long</source>
+                <target>[-Inf,Inf]Nazwa is too long, maximum number of chars {{ limit }}</target>
+            </trans-unit>                 
+            <trans-unit id="7">
+                <source>toffiak_urlshortener.validation.original_url_invalid</source>
+                <target>This is not valid URL</target>
+            </trans-unit>                 
+        </body>
+    </file>
+</xliff>

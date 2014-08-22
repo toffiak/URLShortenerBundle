@@ -1,7 +1,7 @@
 {
     "name": "toffiak/urlshortener-bundle",
-    "description": "Bundle for shorening urls",
-    "keywords": ["URLS shortening"],
+    "description": "Bundle for shortening urls",
+    "keywords": ["url"],
     "license": "MIT",
     "authors": [
     ],
@@ -12,7 +12,9 @@
     "require-dev": {
     },
     "autoload": {
-        "psr-0": {"Toffiak\\URLShortenerBundle": ""}
+        "psr-0": {
+            "Toffiak\\URLShortenerBundle": ""
+        }
     },
     "target-dir": "Toffiak/URLShortenerBundle"
 }

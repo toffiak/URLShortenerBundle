@@ -16,7 +16,7 @@ class LinkManager extends AbstractLinkManager implements LinkManagerInterface
     /**
      * Creating link entity
      * 
-     * @return \Toffiak\URLShortenerBundle\Model\Manager\linkClass
+     * @return \Toffiak\URLShortenerBundle\Model\Link
      */
     public function createLink()
     {

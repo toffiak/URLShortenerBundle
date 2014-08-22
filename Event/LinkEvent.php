@@ -5,16 +5,26 @@ namespace Toffiak\URLShortenerBundle\Event;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * LinkEvent
+ */
 class LinkEvent extends Event
 {
 
+    /**
+     * @var \Symfony \Component\HttpFoundation\Response
+     */
     private $response;
+
+    /**
+     * @var string
+     */
     private $link;
 
     /**
      * Constructing link event.
      * 
-     * @param type $link
+     * @param \Toffiak\UrlShortnerBundle\Model\Link $link
      */
     public function __construct($link)
     {
@@ -42,7 +52,7 @@ class LinkEvent extends Event
     /**
      * Getting link entity.
      * 
-     * @return type
+     * @return Toffiak\URLShortenerBundle\Model\Link
      */
     public function getLink()
     {

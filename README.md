@@ -69,7 +69,7 @@ class Link extends BaseLink
 <?php
 // src/Acme/URLShortenerBundle/Model/Manager/LinkManager.php
 
-namespace Toffiak\MainBundle\Model\Manager;
+namespace Acme\URLShortenerBundle\Model\Manager;
 
 use Toffiak\URLShortenerBundle\Model\Manager\LinkManager as BaseLinkManager;
 
@@ -79,7 +79,17 @@ class LinkManager extends BaseLinkManager
 }
 ```
 
-### Step 5: Import ToffiakURLShortenerBundle routing files
+### Step 5: Configure the ToffiakURLShortenerBundle
+
+``` yaml
+# app/config/config.yml
+toffiak_url_shortener:
+    link: 
+        class: Acme\URLShortenerBundle\Entity\Link
+        manager_class: Acme\URLShortenerBundle\Model\Manager\LinkManager
+```
+
+### Step 6: Import ToffiakURLShortenerBundle routing files
 
 Now that you have activated and configured the bundle, all that is left to do is
 import the FOSUserBundle routing files.
@@ -96,7 +106,7 @@ toffiak_urlshortener:
     prefix:   /
 ```
 
-### Step 6: Update your database schema
+### Step 7: Update your database schema
 
 ``` bash
 $ php app/console doctrine:schema:update --force

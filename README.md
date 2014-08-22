@@ -103,12 +103,6 @@ toffiak_url_shortener:
 
 ### Step 6: Import ToffiakURLShortenerBundle routing files
 
-Now that you have activated and configured the bundle, all that is left to do is
-import the FOSUserBundle routing files.
-
-By importing the routing files you will have ready made pages for things such as
-logging in, creating users, etc.
-
 In YAML:
 
 ``` yaml

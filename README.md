@@ -55,11 +55,23 @@ public function registerBundles()
 
 namespace Acme\URLShortenerBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
 use Toffiak\URLShortenerBundle\Entity\Link as BaseLink;
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="toffiak_urlshortener_link")
+ */
 class Link extends BaseLink
 {
-    
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
 }
 ```
 

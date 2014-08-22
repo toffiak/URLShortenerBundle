@@ -21,4 +21,3 @@ services:
         
     toffiak_urlshortener.link.generator:
         class: Toffiak\URLShortenerBundle\Util\NameGenerator
-        arguments: ["@doctrine.orm.entity_manager"]

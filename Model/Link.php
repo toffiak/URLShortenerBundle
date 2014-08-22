@@ -2,10 +2,12 @@
 
 namespace Toffiak\URLShortenerBundle\Model;
 
+use Toffiak\URLShortenerBundle\Model\LinkInterface;
+
 /**
  * Link
  */
-abstract class Link
+abstract class Link implements LinkInterface
 {
 
     /**

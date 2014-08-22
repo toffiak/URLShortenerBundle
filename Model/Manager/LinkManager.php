@@ -4,7 +4,6 @@ namespace Toffiak\URLShortenerBundle\Model\Manager;
 
 use Toffiak\URLShortenerBundle\Model\Manager\LinkManagerInterface;
 use Toffiak\URLShortenerBundle\Model\Manager\AbstractLinkManager;
-use Toffiak\URLShortenerBundle\Util\NameGenerator;
 
 class LinkManager extends AbstractLinkManager implements LinkManagerInterface
 {
@@ -51,7 +50,4 @@ class LinkManager extends AbstractLinkManager implements LinkManagerInterface
         return $this->getRepository()->findOneBy(array('name' => $name));
     }
 
-//    public function generateName(){
-//        
-//    }
 }
